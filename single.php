@@ -1,0 +1,1 @@
+This is a single article page. <?php echo get_the_category_list(', ')?>

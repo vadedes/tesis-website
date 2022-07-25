@@ -1,0 +1,39 @@
+{
+    "editor.formatOnSave": false,
+    "[php]": {
+        "editor.formatOnSave": true
+    },
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "html.format.contentUnformatted": "pre,code,textarea",
+    "html.format.endWithNewline": false,
+    "html.format.extraLiners": "head, body, /html",
+    "html.format.indentHandlebars": false,
+    "html.format.indentInnerHtml": false,
+    "html.format.maxPreserveNewLines": null,
+    "html.format.preserveNewLines": true,
+    "html.format.wrapLineLength": 120,
+    "html.format.wrapAttributes": "auto",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript, html, ]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "eslint.format.enable": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.lintTask.enable": true,
+    "eslint.run": "onSave",
+    "eslint.validate": ["javascript"],
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "files.associations": {
+        "*.css": "css"
+    },
+    "editor.guides.bracketPairs": true,
+    "editor.bracketPairColorization.enabled": true,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "eslint.alwaysShowStatus": true
+}

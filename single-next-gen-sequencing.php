@@ -1,0 +1,1 @@
+This is the <?php the_title() ?> service detail page.

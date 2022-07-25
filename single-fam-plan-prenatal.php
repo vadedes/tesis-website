@@ -1,0 +1,1 @@
+This <?php the_title() ?> service details page under family planning and prenatal post type.
