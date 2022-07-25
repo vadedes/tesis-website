@@ -48,7 +48,8 @@
                             <div>Services</div>
                         </div>
                         <nav class="dropdown-list w-dropdown-list">
-                            <a href="services-overview.html" class="nav-sub-menu w-dropdown-link">Services Overview</a>
+                            <a href="<?php echo site_url('/services-overview'); ?>"
+                                class="nav-sub-menu w-dropdown-link">Services Overview</a>
                             <div data-hover="true" data-delay="0" class="nav-link sub-nav w-dropdown">
                                 <div class="nav-link sub-nav w-dropdown-toggle">
                                     <div class="w-icon-dropdown-toggle"></div>
@@ -57,20 +58,135 @@
                                 <nav class="dropdown-list sub-nav w-dropdown-list">
                                     <div class="w-dyn-list">
                                         <div role="list" class="w-dyn-items">
+                                            <?php
+                                                // wp_nav_menu(array(
+                                                //     'theme_location' => 'headerMenuLocation',
+                                                // ))
+                                            ?>
                                             <div role="listitem" class="w-dyn-item">
-                                                <a href="#" class="nav-sub-menu w-dropdown-link"></a>
+                                                <a href="<?php echo site_url('/next-gen-sequencing/pgx-testing/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">PGx Testing</a>
                                             </div>
-                                        </div>
-                                        <div class="w-dyn-empty">
-                                            <div>No items found.</div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/next-gen-sequencing/cgx-testing/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">CGx Testing</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/next-gen-sequencing/pulmonary/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Pulmonary</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/next-gen-sequencing/urology/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Urology</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/next-gen-sequencing/wound-care/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Wound Care</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/next-gen-sequencing/anesthesia/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Anesthesia</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/next-gen-sequencing/neurology/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Neurology</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/next-gen-sequencing/cardiac/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Cardiac</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/next-gen-sequencing/diabetes/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Diabetes</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </nav>
                             </div>
-                            <a href="#" class="nav-sub-menu w-dropdown-link">Cytology</a>
-                            <a href="#" class="nav-sub-menu w-dropdown-link">PGx Senior Care</a>
-                            <a href="#" class="nav-sub-menu w-dropdown-link">Family Planning &amp; Prenatal</a>
-                            <a href="#" class="nav-sub-menu w-dropdown-link">Pathology</a>
+                            <!-- CYTOLOGY -->
+                            <div data-hover="true" data-delay="0" class="nav-link sub-nav w-dropdown">
+                                <div class="nav-link sub-nav w-dropdown-toggle">
+                                    <div class="w-icon-dropdown-toggle"></div>
+                                    <div>Cytology</div>
+                                </div>
+                                <nav class="dropdown-list sub-nav w-dropdown-list">
+                                    <div class="w-dyn-list">
+                                        <div role="list" class="w-dyn-items">
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/cytology/cytology-service-1/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Cytology Service 1</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/cytology/cytology-service-2/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Cytology Service 2</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/cytology/cytology-service-3/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Cytology Service 3</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <!-- <a href="#" class="nav-sub-menu w-dropdown-link">Cytology</a> -->
+                            <!-- PGX SENIOR CARE -->
+                            <a href="<?php echo site_url('/pgx-senior-care/pgx-senior-care/'); ?>"
+                                class="nav-sub-menu w-dropdown-link">PGx Senior Care</a>
+
+                            <!-- FAMILY PLANNING & PRENATAL -->
+                            <div data-hover="true" data-delay="0" class="nav-link sub-nav w-dropdown">
+                                <div class="nav-link sub-nav w-dropdown-toggle">
+                                    <div class="w-icon-dropdown-toggle"></div>
+                                    <div>Family Planning &amp; Prenatal</div>
+                                </div>
+                                <nav class="dropdown-list sub-nav w-dropdown-list">
+                                    <div class="w-dyn-list">
+                                        <div role="list" class="w-dyn-items">
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/fam-plan-prenatal/genetic-carrier/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Genetic Carrier</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/fam-plan-prenatal/assurenatal/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Assurenatal</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!-- <a href="#" class="nav-sub-menu w-dropdown-link">Family Planning &amp; Prenatal</a> -->
+
+                            <!-- PATHOLOGY -->
+                            <div data-hover="true" data-delay="0" class="nav-link sub-nav w-dropdown">
+                                <div class="nav-link sub-nav w-dropdown-toggle">
+                                    <div class="w-icon-dropdown-toggle"></div>
+                                    <div>Pathology</div>
+                                </div>
+                                <nav class="dropdown-list sub-nav w-dropdown-list">
+                                    <div class="w-dyn-list">
+                                        <div role="list" class="w-dyn-items">
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/pathology/bone-marrow/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Bone Marrow</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/pathology/prostate/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Prostate</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/pathology/peripheral-blood/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Peripheral Blood</a>
+                                            </div>
+                                            <div role="listitem" class="w-dyn-item">
+                                                <a href="<?php echo site_url('/pathology/pathology-service-4/'); ?>"
+                                                    class="nav-sub-menu w-dropdown-link">Pathology Service 4</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!-- <a href="#" class="nav-sub-menu w-dropdown-link">Pathology</a> -->
                         </nav>
                     </div>
                     <div data-hover="true" data-delay="0" class="nav-link w-dropdown">

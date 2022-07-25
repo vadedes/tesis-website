@@ -13,3 +13,16 @@ function tesis_files(){
 }
 
 add_action('wp_enqueue_scripts', 'tesis_files');
+
+function tesis_features(){
+    register_nav_menu('headerMenuLocation', 'Header Menu Location');
+  register_nav_menu('footerLocationOne', 'Footer Location One');
+  register_nav_menu('footerLocationTwo', 'Footer Location Two');
+
+
+  //automatically generate page-title for each page
+  add_theme_support('title-tag');
+  add_theme_support('post-thumbnails');//enable post thumbnail images //for custom post types, add this support separately
+}
+
+add_action('after_setup_theme', 'tesis_features');

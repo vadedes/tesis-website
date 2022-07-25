@@ -70,9 +70,8 @@ get_header(); ?>
 </div>
 <div class="home-services-section wf-section">
     <div class="services-section-wrapper service-intro">
-        <div class="section-accent intro"><img src="images/section-accent-type-2.png" loading="lazy"
-                srcset="images/section-accent-type-2-p-500.png 500w, images/section-accent-type-2-p-800.png 800w, images/section-accent-type-2-p-1080.png 1080w, images/section-accent-type-2.png 1600w"
-                sizes="100vw" alt="" class="accent-bg-img"></div>
+        <div class="section-accent intro"><img src="<?php echo get_theme_file_uri('images/section-accent-type-2.png')?>"
+                loading="lazy" sizes="100vw" alt="" class="accent-bg-img"></div>
         <div class="container">
             <div class="section-headline-wrapper">
                 <div class="headline-wrapper left">
@@ -122,7 +121,7 @@ get_header(); ?>
                                 <div role="list" class="services-grid _2-col-tablet w-dyn-items">
                                     <?php 
                                     $ngsServices = new WP_Query(array(
-                                      'posts_per_page' => 9,
+                                      'posts_per_page' => 10,
                                       'post_type' => 'next-gen-sequencing',
                                       'meta_key' => 'service_id',
                                       'orderby' => 'meta_value_num',
@@ -219,7 +218,7 @@ get_header(); ?>
 
                                 <?php 
                                     $pgxSeniorCareServices = new WP_Query(array(
-                                      'posts_per_page' => 3,
+                                      'posts_per_page' => 10,
                                       'post_type' => 'pgx-senior-care',
                                       'meta_key' => 'service_id',
                                       'orderby' => 'meta_value_num',
@@ -265,7 +264,7 @@ get_header(); ?>
                             <div class="w-layout-grid services-grid _2-col-tablet">
                                 <?php 
                                     $famPlanPrenatalServices = new WP_Query(array(
-                                      'posts_per_page' => 3,
+                                      'posts_per_page' => 10,
                                       'post_type' => 'fam-plan-prenatal',
                                       'meta_key' => 'service_id',
                                       'orderby' => 'meta_value_num',
@@ -307,7 +306,7 @@ get_header(); ?>
                             <div class="w-layout-grid services-grid _2-col-tablet">
                                 <?php 
                                     $pathologyServices = new WP_Query(array(
-                                      'posts_per_page' => 3,
+                                      'posts_per_page' => 10,
                                       'post_type' => 'pathology',
                                       'meta_key' => 'service_id',
                                       'orderby' => 'meta_value_num',
@@ -363,7 +362,8 @@ get_header(); ?>
                     <p class="feature-description">We believe PGx should be incorporated into all Fall Prevention
                         Protocols as it can help reduce fall rates and limit adverse reactions. Learn how Tesis can help
                         you provide the best care whilte decreasing expenses.</p>
-                    <a href="#" class="btn btn-primary ">Learn More</a>
+                    <a href="<?php echo site_url('/next-gen-sequencing/pgx-testing') ?>" class="btn btn-primary ">Learn
+                        More</a>
                 </div>
             </div>
         </div>
@@ -377,13 +377,15 @@ get_header(); ?>
                 <h2 class="secondary-headline center">Tesis Biosciences Advantages</h2>
             </div>
             <div class="section-content-wrapper benefits">
-                <div class="w-layout-grid benefits-grid"><img src="images/benefits-image.jpg" loading="lazy"
+                <div class="w-layout-grid benefits-grid"><img
+                        src="<?php echo get_theme_file_uri('images/benefits-image.jpg')?>" loading="lazy"
                         id="w-node-_97f0c1b1-d614-298c-7a28-cad31d0a96d0-1d0a96c6" alt="" class="benefits-img">
                     <div id="w-node-_97f0c1b1-d614-298c-7a28-cad31d0a96d1-1d0a96c6" class="grid-container desktop">
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/HL7-interfacing.svg" loading="lazy" alt=""
-                                        class="icon-img"></div>
+                                <div class="icon"><img
+                                        src="<?php echo get_theme_file_uri('images/HL7-interfacing.svg')?>"
+                                        loading="lazy" alt="" class="icon-img"></div>
                             </div>
                             <div class="benefit-card-text-content">
                                 <h4 class="benefit-text">HL7 Interfacing or <br>API Reports</h4>
@@ -391,7 +393,8 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/portal.svg" loading="lazy" alt="" class="icon-img">
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('/images/portal.svg');?>"
+                                        loading=" lazy" alt="" class="icon-img">
                                 </div>
                             </div>
                             <div class="benefit-card-text-content">
@@ -400,8 +403,8 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/consistency.svg" loading="lazy" alt=""
-                                        class="icon-img"></div>
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('images/consistency.svg');?>"
+                                        loading="lazy" alt="" class="icon-img"></div>
                             </div>
                             <div class="benefit-card-text-content">
                                 <h4 class="benefit-text">Consistently Fast Turnaround Times</h4>
@@ -409,7 +412,8 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/quality.svg" loading="lazy" alt="" class="icon-img">
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('images/quality.svg');?>"
+                                        loading="lazy" alt="" class="icon-img">
                                 </div>
                             </div>
                             <div class="benefit-card-text-content">
@@ -420,8 +424,8 @@ get_header(); ?>
                     <div id="w-node-_97f0c1b1-d614-298c-7a28-cad31d0a96f4-1d0a96c6" class="grid-container desktop">
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/parent-first.svg" loading="lazy" alt=""
-                                        class="icon-img"></div>
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('images/parent-first.svg');?>"
+                                        loading="lazy" alt="" class="icon-img"></div>
                             </div>
                             <div class="benefit-card-text-content">
                                 <h4 class="benefit-text">Patient First Culture</h4>
@@ -429,8 +433,9 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/partner-physician.svg" loading="lazy" alt=""
-                                        class="icon-img"></div>
+                                <div class="icon"><img
+                                        src="<?php echo get_theme_file_uri('images/partner-physician.svg');?>"
+                                        loading="lazy" alt="" class="icon-img"></div>
                             </div>
                             <div class="benefit-card-text-content">
                                 <h4 class="benefit-text">Partner to Physician</h4>
@@ -438,7 +443,8 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/24-7.svg" loading="lazy" alt="" class="icon-img">
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('images/24-7.svg');?>"
+                                        loading="lazy" alt="" class="icon-img">
                                 </div>
                             </div>
                             <div class="benefit-card-text-content">
@@ -447,8 +453,8 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/compliant.svg" loading="lazy" alt=""
-                                        class="icon-img"></div>
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('images/compliant.svg');?>"
+                                        loading="lazy" alt="" class="icon-img"></div>
                             </div>
                             <div class="benefit-card-text-content">
                                 <h4 class="benefit-text">Complaint &amp; Accredited Laboratory</h4>
@@ -460,8 +466,9 @@ get_header(); ?>
                     <div id="w-node-_97f0c1b1-d614-298c-7a28-cad31d0a9712-1d0a96c6" class="grid-container">
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/HL7-interfacing.svg" loading="lazy" alt=""
-                                        class="icon-img"></div>
+                                <div class="icon"><img
+                                        src="<?php echo get_theme_file_uri('images/HL7-interfacing.svg');?>"
+                                        loading="lazy" alt="" class="icon-img"></div>
                             </div>
                             <div class="benefit-card-text-content">
                                 <h4 class="benefit-text">HL7 Interfacing or <br>API Reports</h4>
@@ -469,7 +476,8 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/portal.svg" loading="lazy" alt="" class="icon-img">
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('images/portal.svg');?>"
+                                        loading="lazy" alt="" class="icon-img">
                                 </div>
                             </div>
                             <div class="benefit-card-text-content">
@@ -478,8 +486,8 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/consistency.svg" loading="lazy" alt=""
-                                        class="icon-img"></div>
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('images/consistency.svg');?>"
+                                        loading="lazy" alt="" class="icon-img"></div>
                             </div>
                             <div class="benefit-card-text-content">
                                 <h4 class="benefit-text">Consistently Fast Turnaround Times</h4>
@@ -487,7 +495,8 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/quality.svg" loading="lazy" alt="" class="icon-img">
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('images/quality.svg');?>"
+                                        loading="lazy" alt="" class="icon-img">
                                 </div>
                             </div>
                             <div class="benefit-card-text-content">
@@ -498,8 +507,8 @@ get_header(); ?>
                     <div id="w-node-_97f0c1b1-d614-298c-7a28-cad31d0a9735-1d0a96c6" class="grid-container">
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/parent-first.svg" loading="lazy" alt=""
-                                        class="icon-img"></div>
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('images/parent-first.svg');?>"
+                                        loading="lazy" alt="" class="icon-img"></div>
                             </div>
                             <div class="benefit-card-text-content">
                                 <h4 class="benefit-text">Patient First Culture</h4>
@@ -507,8 +516,9 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/partner-physician.svg" loading="lazy" alt=""
-                                        class="icon-img"></div>
+                                <div class="icon"><img
+                                        src="<?php echo get_theme_file_uri('images/partner-physician.svg');?>"
+                                        loading="lazy" alt="" class="icon-img"></div>
                             </div>
                             <div class="benefit-card-text-content">
                                 <h4 class="benefit-text">Partner to Physician</h4>
@@ -516,7 +526,8 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/24-7.svg" loading="lazy" alt="" class="icon-img">
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('images/24-7.svg');?>"
+                                        loading="lazy" alt="" class="icon-img">
                                 </div>
                             </div>
                             <div class="benefit-card-text-content">
@@ -525,8 +536,8 @@ get_header(); ?>
                         </div>
                         <div class="benefit-card">
                             <div class="card-icon-wrapper benefits">
-                                <div class="icon"><img src="images/compliant.svg" loading="lazy" alt=""
-                                        class="icon-img"></div>
+                                <div class="icon"><img src="<?php echo get_theme_file_uri('images/compliant.svg');?>"
+                                        loading="lazy" alt="" class="icon-img"></div>
                             </div>
                             <div class="benefit-card-text-content">
                                 <h4 class="benefit-text">Complaint &amp; Accredited Laboratory</h4>
@@ -536,9 +547,9 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="section-accent benefits"><img src="images/section-accent-type-3.png" loading="lazy"
-                srcset="images/section-accent-type-3-p-500.png 500w, images/section-accent-type-3-p-800.png 800w, images/section-accent-type-3-p-1080.png 1080w, images/section-accent-type-3-p-1600.png 1600w, images/section-accent-type-3.png 1920w"
-                sizes="100vw" alt="" class="accent-bg-img"></div>
+        <div class="section-accent benefits"><img
+                src="<?php echo get_theme_file_uri('images/section-accent-type-3.png');?>" loading="lazy" sizes="100vw"
+                alt="" class="accent-bg-img"></div>
     </div>
 </div>
 <div class="locations-section wf-section">
@@ -566,15 +577,18 @@ get_header(); ?>
                             <p class="paragraph-3">8125N 86th PI<br>Scottsdale, AZ 85258</p>
                             <div class="location-contact-btn top">
                                 <div class="card-icon-wrapper benefits">
-                                    <div class="icon orange-shadow"><img src="images/phone-orange.svg" loading="lazy"
-                                            alt="" class="icon-img"></div>
+                                    <div class="icon orange-shadow">
+                                        <img src="<?php echo get_theme_file_uri('/images/phone-orange.svg'); ?>"
+                                            loading="lazy" alt="" class="icon-img">
+                                    </div>
                                 </div>
                                 <a href="tel:+18448374785" class="locations-btn">844-837-4785</a>
                             </div>
                             <div class="location-contact-btn">
                                 <div class="card-icon-wrapper benefits">
-                                    <div class="icon"><img src="images/blue-print.svg" loading="lazy" alt=""
-                                            class="icon-img"></div>
+                                    <div class="icon"><img
+                                            src="<?php echo get_theme_file_uri('images/blue-print.svg'); ?>"
+                                            loading="lazy" alt="" class="icon-img"></div>
                                 </div>
                                 <a href="tel:+18446891251" class="locations-btn">844-689-1251</a>
                             </div>
@@ -584,15 +598,17 @@ get_header(); ?>
                             <p>2953 S. Peoria St. Suite 260<br>Aurora, CO 80014</p>
                             <div class="location-contact-btn top">
                                 <div class="card-icon-wrapper benefits">
-                                    <div class="icon orange-shadow"><img src="images/phone-orange.svg" loading="lazy"
-                                            alt="" class="icon-img"></div>
+                                    <div class="icon orange-shadow"><img
+                                            src="<?php echo get_theme_file_uri('images/phone-orange.svg'); ?>"
+                                            loading="lazy" alt="" class="icon-img"></div>
                                 </div>
                                 <a href="tel:+17207262130" class="locations-btn">720-726-2130</a>
                             </div>
                             <div class="location-contact-btn">
                                 <div class="card-icon-wrapper benefits">
-                                    <div class="icon"><img src="images/blue-print.svg" loading="lazy" alt=""
-                                            class="icon-img"></div>
+                                    <div class="icon"><img
+                                            src="<?php echo get_theme_file_uri('images/blue-print.svg'); ?>"
+                                            loading="lazy" alt="" class="icon-img"></div>
                                 </div>
                                 <a href="tel:+17208632042" class="locations-btn">720-863-2042</a>
                             </div>
@@ -602,15 +618,17 @@ get_header(); ?>
                             <p>16115 Park Row, Suite 190<br>Houston, TX 77084</p>
                             <div class="location-contact-btn top">
                                 <div class="card-icon-wrapper benefits">
-                                    <div class="icon orange-shadow"><img src="images/phone-orange.svg" loading="lazy"
-                                            alt="" class="icon-img"></div>
+                                    <div class="icon orange-shadow"><img
+                                            src="<?php echo get_theme_file_uri('images/phone-orange.svg'); ?>"
+                                            loading="lazy" alt="" class="icon-img"></div>
                                 </div>
                                 <a href="tel:+17132714133" class="locations-btn">713-271-4133</a>
                             </div>
                             <div class="location-contact-btn">
                                 <div class="card-icon-wrapper benefits">
-                                    <div class="icon"><img src="images/blue-print.svg" loading="lazy" alt=""
-                                            class="icon-img"></div>
+                                    <div class="icon"><img
+                                            src="<?php echo get_theme_file_uri('images/blue-print.svg'); ?>"
+                                            loading="lazy" alt="" class="icon-img"></div>
                                 </div>
                                 <a href="tel:+18446891155" class="locations-btn">844-689-1155</a>
                             </div>
@@ -618,8 +636,8 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-            <div class="section-accent benefits locations"><img src="images/section-accent-type-3.png" loading="lazy"
-                    srcset="images/section-accent-type-3-p-500.png 500w, images/section-accent-type-3-p-800.png 800w, images/section-accent-type-3-p-1080.png 1080w, images/section-accent-type-3-p-1600.png 1600w, images/section-accent-type-3.png 1920w"
+            <div class="section-accent benefits locations"><img
+                    src="<?php echo get_theme_file_uri('images/section-accent-type-3.png'); ?>" loading="lazy"
                     sizes="100vw" alt="" class="accent-bg-img"></div>
         </div>
     </div>
