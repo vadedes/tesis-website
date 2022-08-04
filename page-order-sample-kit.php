@@ -3,48 +3,45 @@
 get_header(); ?>
 
 <div class="inner--hero-page-section wf-section">
-    <div class="inner-page-section-container locaitons">
+    <div class="inner-page-section-container sample-kit">
       <div class="container inner-hero-title-wrapper">
         <div class="inner-header-container">
           <div class="hero-headline-wrapper science">
-            <h4 class="top-headline about">OUR LOCATIONS</h4>
-            <h1 class="inner-hero-headline about">Multiple Locations to<br>Optimize Result Turnarounds</h1>
+            <h4 class="top-headline about">RESOURCES</h4>
+            <h1 class="inner-hero-headline about">Order a Sample Kit</h1>
             <div class="btn-container">
-              <a href="#" class="btn btn-primary w-button">Contact Form</a>
-              <a href="#" class="btn btn-secondary w-button">Order a Sample Kit</a>
+              <a href="<?php echo site_url('/contact-us'); ?>" class="btn btn-primary">Contact Form</a>
+              <a href="<?php echo site_url('/order-sample-kit'); ?>" class="btn btn-secondary">Order a Sample Kit</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="section-accent services-intro science"><img src="images/section-accent-type-3.png" loading="lazy" srcset="images/section-accent-type-3-p-500.png 500w, images/section-accent-type-3-p-800.png 800w, images/section-accent-type-3-p-1080.png 1080w, images/section-accent-type-3-p-1600.png 1600w, images/section-accent-type-3.png 1920w" sizes="100vw" alt="" class="accent-bg-img"></div>
+      <div class="section-accent services-intro science"><img src="<?php echo get_theme_file_uri('images/section-accent-type-3.png'); ?>" loading="lazy"  sizes="100vw" alt="" class="accent-bg-img"></div>
     </div>
   </div>
-  <div class="inner--page-section locations-page wf-section">
+  <div class="inner--page-section wf-section">
     <div class="inner-page-section-container">
       <div class="container">
-        <div class="map-container">
-          <div class="map-selector-wrapper map-button-container">
-            <div class="map-selector-label-wrapper">
-              <h5 class="map-selector-label">OUR LOCATIONS</h5>
-              <div class="map-selector-sub-label">Find a location that best fits your needs</div>
-            </div>
-            <div data-w-id="95260ee4-b3f1-3035-9400-8ddfc546b2fa" style="background-color:rgb(248,248,248)" class="map-selector">
-              <h5 style="color:rgba(23,120,189,0.8)" class="map-selector-label selector-label">Tesis Arizona</h5>
-              <div style="color:rgb(51,51,51)" class="map-selector-address">8125 N 86th Pl<br>Scottsdale, AZ 85258</div>
-            </div>
-            <div data-w-id="5cd681b8-f4a0-4323-e8e3-6041758de068" style="background-color:rgb(248,248,248)" class="map-selector">
-              <h5 style="color:rgba(23,120,189,0.8)" class="map-selector-label selector-label">Tesis Colorado</h5>
-              <div style="color:rgb(51,51,51)" class="map-selector-address">2953 S. Peoria St. Suite 260<br>Aurora, CO 80014</div>
-            </div>
-            <div data-w-id="c5ddef06-d084-acaa-df3d-b61fde012cb6" style="background-color:rgb(248,248,248)" class="map-selector">
-              <h5 style="color:rgba(23,120,189,0.8)" class="map-selector-label selector-label">Tesis Texas</h5>
-              <div style="color:rgb(51,51,51)" class="map-selector-address">16115 Park Row, Suite 190<br>Houston, TX 77084</div>
+        <div class="sample-kit-content-wrapper">
+          <div class="image"><img src="<?php echo get_theme_file_uri('images/order-sample-kit.jpg'); ?>" loading="lazy" alt="" class="image-2"></div>
+          <div class="contact-form-container full">
+            <div class="form-block contact-page-form full">
+              <h1 class="form-title contact-page">Fill out this form to receive the <span class="text-span-2">Sample Kit</span></h1>
+              <form id="wf-form-Order-Sample-Kit" name="wf-form-Order-Sample-Kit" data-name="Order Sample Kit" method="get"><label for="Name-4" class="form-field-label">First Name</label><input type="text" class="form-field w-input" maxlength="256" name="Name" data-name="Name" placeholder="" id="Name-4"><label for="Phone" class="form-field-label">Phone Number</label><input type="tel" class="form-field w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="" id="Phone"><label for="Email-Address" class="form-field-label">Email Address</label><input type="email" class="form-field w-input" maxlength="256" name="Email-Address" data-name="Email Address" placeholder="" id="Email-Address" required=""><label for="Business-Address" class="form-field-label">Business Address</label><input type="text" class="form-field w-input" maxlength="256" name="Business-Address" data-name="Business Address" placeholder="" id="Business-Address"><label for="Business-City-State-Zip-Code" class="form-field-label">Business City, State, &amp; Zip Code</label><input type="text" class="form-field w-input" maxlength="256" name="Business-City-State-Zip-Code" data-name="Business City, State, &amp; Zip Code" placeholder="" id="Business-City-State-Zip-Code"><label for="Additional-Information" class="form-field-label">Additional Information</label><textarea id="Additional-Information" name="Additional-Information" maxlength="5000" data-name="Additional Information" placeholder="Message" class="form-field message contact-page w-input"></textarea>
+              <input type="submit" data-wait="Please wait..." value="Submit" class="form-submit">
+            </form>
+              <div class="w-form-done">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div class="w-form-fail">
+                <div>Oops! Something went wrong while submitting the form.</div>
+              </div>
             </div>
           </div>
-          <div class="locations-map w-widget w-widget-map" data-widget-style="roadmap" data-widget-latlng="" aria-label="" data-enable-scroll="true" role="region" title="" data-enable-touch="true" data-widget-zoom="12" data-widget-tooltip=""></div>
         </div>
       </div>
     </div>
+    <div class="section-bg-gradient-overlay type-2 science"></div>
   </div>
   <div bind="8e00ed11-4c64-7d21-1276-f0ea31f3dd23" class="inner--page-cta-section wf-section">
     <div bind="8e00ed11-4c64-7d21-1276-f0ea31f3dd24" class="inner-page-section-container cta">
@@ -276,5 +273,8 @@ get_header(); ?>
         </div>
     </div>
 </div>
+
+
+
 <?php get_footer(); 
 ?>

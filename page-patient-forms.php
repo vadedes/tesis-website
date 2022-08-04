@@ -2,51 +2,296 @@
 
 get_header(); ?>
 
+<style>
+    .accordion-headline {
+        font-size: 1.125rem;
+    }
+</style>
+
 <div class="inner--hero-page-section wf-section">
-    <div class="inner-page-section-container locaitons">
-      <div class="container inner-hero-title-wrapper">
-        <div class="inner-header-container">
-          <div class="hero-headline-wrapper science">
-            <h4 class="top-headline about">OUR LOCATIONS</h4>
-            <h1 class="inner-hero-headline about">Multiple Locations to<br>Optimize Result Turnarounds</h1>
-            <div class="btn-container">
-              <a href="#" class="btn btn-primary w-button">Contact Form</a>
-              <a href="#" class="btn btn-secondary w-button">Order a Sample Kit</a>
+    <div class="inner-page-section-container patient-resources">
+        <div class="container inner-hero-title-wrapper">
+            <div class="inner-header-container">
+                <div class="hero-headline-wrapper science">
+                    <h4 class="top-headline about">RESOURCES FOR</h4>
+                    <h1 class="inner-hero-headline about">Patients</h1>
+                    <div class="btn-container">
+                        <a href="#" class="btn btn-primary w-button">Contact Form</a>
+                        <a href="#" class="btn btn-secondary w-button">Order a Sample Kit</a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="section-accent services-intro science"><img src="images/section-accent-type-3.png" loading="lazy" srcset="images/section-accent-type-3-p-500.png 500w, images/section-accent-type-3-p-800.png 800w, images/section-accent-type-3-p-1080.png 1080w, images/section-accent-type-3-p-1600.png 1600w, images/section-accent-type-3.png 1920w" sizes="100vw" alt="" class="accent-bg-img"></div>
+        <div class="section-accent services-intro science"><img src="images/section-accent-type-3.png" loading="lazy"
+                srcset="images/section-accent-type-3-p-500.png 500w, images/section-accent-type-3-p-800.png 800w, images/section-accent-type-3-p-1080.png 1080w, images/section-accent-type-3-p-1600.png 1600w, images/section-accent-type-3.png 1920w"
+                sizes="100vw" alt="" class="accent-bg-img"></div>
     </div>
-  </div>
-  <div class="inner--page-section locations-page wf-section">
-    <div class="inner-page-section-container">
-      <div class="container">
-        <div class="map-container">
-          <div class="map-selector-wrapper map-button-container">
-            <div class="map-selector-label-wrapper">
-              <h5 class="map-selector-label">OUR LOCATIONS</h5>
-              <div class="map-selector-sub-label">Find a location that best fits your needs</div>
+</div>
+<div id="patient-forms-section" class="inner--forms-section wf-section">
+    <div class="inner-page-section-container resources patient-forms">
+        <div class="container forms-page">
+            <div bind="d9880d43-0d39-6b3b-6afb-3314ba4a80a2" class="w-embed w-script">
+                <style>
+                /* Tab Links */
+                .form-tab-link {
+                    background: transparent;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                .sample-kit-link {
+                    background: transparent;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                .form-tab-link-bg {
+                    background: linear-gradient(to right, #F99462, rgba(249, 148, 98, 0.65));
+                    opacity: 0;
+                    transition: all 0.2s ease-in-out;
+                }
+
+                .form-tab-link:hover {
+                    color: #fff;
+                }
+
+                .form-tab-link:hover .form-tab-link-bg {
+                    opacity: 1;
+                }
+
+                .sample-kit-link:hover .form-tab-link-bg {
+                    opacity: 1;
+                }
+
+                .sample-kit-link:hover {
+                    color: #fff;
+                }
+
+                .form-tab-link.active {
+                    color: #fff;
+                }
+
+                .form-tab-link.active .form-tab-link-bg {
+                    opacity: 1;
+                }
+
+                /* Tab content */
+                .form-tab-content-wrapper {
+                    opacity: 0;
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: translate 1s ease, opacity 0 linear;
+                }
+
+                .form-tab-content-wrapper.show {
+                    display: block;
+                    opacity: 1;
+                    animation: translate-up;
+                    animation-duration: 0.8s;
+                }
+
+                @keyframes translate-up {
+                    from {
+                        transform: translateY(30px);
+                    }
+
+                    to {
+                        transform: translateY(0);
+                    }
+                }
+                </style>
+                <script>
+                window.addEventListener("load", function() {
+                    var links = document.querySelectorAll('.form-tab-link');
+                    var tabs = document.querySelectorAll('.form-tab-content-wrapper');
+                    //listen to click on buttons
+                    Array.from(links).forEach(function(link, idx) {
+                        link.addEventListener("click", function() {
+                            //set all links to inactive
+                            deactivateLinks();
+                            //set all tabs to inactive
+                            deactivateTabs();
+                            //add active and show classes respectively
+                            link.classList.add('active');
+                            Array.from(tabs)[idx].classList.add('show');
+                        });
+                    });
+
+                    function deactivateLinks() {
+                        Array.from(links).forEach(function(link) {
+                            link.classList.remove('active');
+                        });
+                    };
+
+                    function deactivateTabs() {
+                        Array.from(tabs).forEach(function(tab) {
+                            tab.classList.remove('show');
+                        })
+                    }
+                }, false);
+                </script>
             </div>
-            <div data-w-id="95260ee4-b3f1-3035-9400-8ddfc546b2fa" style="background-color:rgb(248,248,248)" class="map-selector">
-              <h5 style="color:rgba(23,120,189,0.8)" class="map-selector-label selector-label">Tesis Arizona</h5>
-              <div style="color:rgb(51,51,51)" class="map-selector-address">8125 N 86th Pl<br>Scottsdale, AZ 85258</div>
+            <div class="forms-content-wrapper">
+                <div class="form-layout-col-left">
+                    <div class="form-tab-links-wrapper">
+                        <a href="#" class="form-tab-link active w-inline-block">
+                            <div class="form-tab-link-bg"></div>
+                            <div class="text-block">Patient FAQ&#x27;s</div>
+                        </a>
+                        <a href="#" class="form-tab-link w-inline-block">
+                            <div class="text-block">Patient Billing</div>
+                            <div class="form-tab-link-bg"></div>
+                        </a>
+                        <a href="<?php echo site_url('/preparing-for-testing'); ?>" class="sample-kit-link w-inline-block">
+                            <div class="text-block">Preparing for Testing</div>
+                            <div class="form-tab-link-bg"></div>
+                        </a>
+                        <a href="#" class="sample-kit-link w-inline-block">
+                            <div class="text-block">Record Release</div>
+                            <div class="form-tab-link-bg"></div>
+                        </a>
+                        <a href="<?php echo site_url('/resources'); ?>" class="sample-kit-link w-inline-block">
+                            <div class="text-block">Resources</div>
+                            <div class="form-tab-link-bg"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="form-layout-col-right patient-resources">
+                    <div class="form-search-box">
+                        <form action="/search" bind="d9880d43-0d39-6b3b-6afb-3314ba4a80b8" class="form-search w-form">
+                            <input type="search" class="search-input w-input" maxlength="256" name="query"
+                                placeholder="Search…" id="search" bind="d9880d43-0d39-6b3b-6afb-3314ba4a80b9"
+                                required=""><input type="submit" value="Search"
+                                bind="d9880d43-0d39-6b3b-6afb-3314ba4a80ba" class="search-button w-button">
+                        </form>
+                    </div>
+                    <div id="patientFaq" class="form-tab-content-wrapper show patients-resources">
+                        <div data-w-id="5f829639-1457-a0ff-e7f3-0a91000f11e1" class="accordion patients-resources">
+                            <div class="accordion-headline-container">
+                                <h5 class="accordion-headline">What insurance plans do you accept?</h5>
+                                <div class="accordion-arrow">
+                                    <div bind="5f829639-1457-a0ff-e7f3-0a91000f11e6"
+                                        style="color:rgb(22,112,177);-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+                                        class="html-embed-2 w-embed"><svg width="25" height="24" viewbox="0 0 25 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.73361 6.16496L2.96436 7.94496L12.8602 17.835L22.756 7.93496L20.9868 6.16496L12.8602 14.295L4.73361 6.16496Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <div style="height:0px" class="accordion-content-container">
+                                <div class="accordion-description w-richtext">
+                                    <ul role="list">
+                                        <li>Medicare</li>
+                                        <li>Medicaid Colorado</li>
+                                        <li>Medicaid Arizona</li>
+                                        <li>Medicaid Utah</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-w-id="7af1e735-42e2-bd8c-0e42-5c0c5967fcfd" class="accordion patients-resources">
+                            <div class="accordion-headline-container">
+                                <h5 class="accordion-headline">Do I have to fast (go without eating) prior to testing?
+                                </h5>
+                                <div class="accordion-arrow">
+                                    <div bind="7af1e735-42e2-bd8c-0e42-5c0c5967fd02"
+                                        style="color:rgb(22,112,177);-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+                                        class="html-embed-2 w-embed"><svg width="25" height="24" viewbox="0 0 25 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.73361 6.16496L2.96436 7.94496L12.8602 17.835L22.756 7.93496L20.9868 6.16496L12.8602 14.295L4.73361 6.16496Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <div style="height:0px" class="accordion-content-container">
+                                <div class="accordion-description w-richtext">
+                                    <p>Sometimes special preparation is necessary to improve the accuracy of laboratory
+                                        testing. This may involve:</p>
+                                    <ul role="list">
+                                        <li>Fasting (not eating any or certain foods) for several hours or overnight and
+                                            possibly even avoiding coffee with cream/sugar until after laboratory
+                                            testing has been performed.</li>
+                                        <li>Drinking more or less water than usual.</li>
+                                        <li>Avoiding certain medications or vitamin and herbal supplements prior to
+                                            testing.</li>
+                                    </ul>
+                                    <p>It is important to consult with your provider about the medications you are
+                                        currently taking, including supplements and other over-the-counter medications,
+                                        before making any changes to your routine prior to having laboratory tests
+                                        performed.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-w-id="be471be6-b786-9f7e-9a34-9d8afbde24c8" class="accordion patients-resources">
+                            <div class="accordion-headline-container">
+                                <h5 class="accordion-headline">How do I get a copy of my results?</h5>
+                                <div class="accordion-arrow">
+                                    <div bind="be471be6-b786-9f7e-9a34-9d8afbde24cd"
+                                        style="color:rgb(22,112,177);-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+                                        class="html-embed-2 w-embed"><svg width="25" height="24" viewbox="0 0 25 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.73361 6.16496L2.96436 7.94496L12.8602 17.835L22.756 7.93496L20.9868 6.16496L12.8602 14.295L4.73361 6.16496Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <div style="height:0px" class="accordion-content-container">
+                                <div class="accordion-description w-richtext">
+                                    <p>The results will be given to you by your physician or they can be obtained by
+                                        filling out a patient records request form <a href="#">here</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-w-id="fce1f6b6-31f3-f257-d47f-9ade82d960eb" class="accordion patients-resources">
+                            <div class="accordion-headline-container">
+                                <h5 class="accordion-headline">Will I receive a bill for testing?</h5>
+                                <div class="accordion-arrow">
+                                    <div bind="fce1f6b6-31f3-f257-d47f-9ade82d960f0"
+                                        style="color:rgb(22,112,177);-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0deg) skew(0, 0)"
+                                        class="html-embed-2 w-embed"><svg width="25" height="24" viewbox="0 0 25 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.73361 6.16496L2.96436 7.94496L12.8602 17.835L22.756 7.93496L20.9868 6.16496L12.8602 14.295L4.73361 6.16496Z"
+                                                fill="currentColor"></path>
+                                        </svg></div>
+                                </div>
+                            </div>
+                            <div style="height:0px" class="accordion-content-container">
+                                <div class="accordion-description w-richtext">
+                                    <p>Please view our <a href="#">Patient Billing</a> section to learn more.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-tab-content-wrapper">
+                        <div class="tab-form-wrapper new-account">
+                            <a href="#" class="cta-btn large forms w-inline-block">
+                                <div class="cta-border-line"></div>
+                                <div class="cta-btn-content-wrapper">
+                                    <div class="cta-btn-num-wrapper forms"></div>
+                                    <div class="cta-btn-text-wrapper forms">
+                                        <h5 class="cta-btn-label-main forms">Advance Beneficiary Notice of Noncoverage
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="cta-btn-arrow"><img loading="lazy" src="images/arrow-right-chevron.svg"
+                                        alt="" class="icon-t2"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div data-w-id="5cd681b8-f4a0-4323-e8e3-6041758de068" style="background-color:rgb(248,248,248)" class="map-selector">
-              <h5 style="color:rgba(23,120,189,0.8)" class="map-selector-label selector-label">Tesis Colorado</h5>
-              <div style="color:rgb(51,51,51)" class="map-selector-address">2953 S. Peoria St. Suite 260<br>Aurora, CO 80014</div>
-            </div>
-            <div data-w-id="c5ddef06-d084-acaa-df3d-b61fde012cb6" style="background-color:rgb(248,248,248)" class="map-selector">
-              <h5 style="color:rgba(23,120,189,0.8)" class="map-selector-label selector-label">Tesis Texas</h5>
-              <div style="color:rgb(51,51,51)" class="map-selector-address">16115 Park Row, Suite 190<br>Houston, TX 77084</div>
-            </div>
-          </div>
-          <div class="locations-map w-widget w-widget-map" data-widget-style="roadmap" data-widget-latlng="" aria-label="" data-enable-scroll="true" role="region" title="" data-enable-touch="true" data-widget-zoom="12" data-widget-tooltip=""></div>
         </div>
-      </div>
+        <div class="section-accent cta type-2 forms"><img src="images/section-accent-type-2.png" loading="lazy"
+                srcset="images/section-accent-type-2-p-500.png 500w, images/section-accent-type-2-p-800.png 800w, images/section-accent-type-2-p-1080.png 1080w, images/section-accent-type-2.png 1600w"
+                sizes="100vw" alt="" class="accent-bg-img"></div>
     </div>
-  </div>
-  <div bind="8e00ed11-4c64-7d21-1276-f0ea31f3dd23" class="inner--page-cta-section wf-section">
+</div>
+<div bind="8e00ed11-4c64-7d21-1276-f0ea31f3dd23" class="inner--page-cta-section wf-section">
     <div bind="8e00ed11-4c64-7d21-1276-f0ea31f3dd24" class="inner-page-section-container cta">
         <div bind="8e00ed11-4c64-7d21-1276-f0ea31f3dd25" class="container">
             <div bind="8e00ed11-4c64-7d21-1276-f0ea31f3dd26" class="section-content-wrapper split-img-left">
@@ -276,5 +521,6 @@ get_header(); ?>
         </div>
     </div>
 </div>
+
 <?php get_footer(); 
 ?>

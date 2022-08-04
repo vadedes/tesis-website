@@ -210,6 +210,31 @@
         0px -10px 20px 0px rgba(241, 97, 34, 0.05);
 }
 </style>
+<script>
+var accordionItems = document.querySelectorAll('.accordion');
+var accordionContainers = document.querySelectorAll('.accordion-content-container');
+
+accordionItems.forEach((item, idx) => {
+    item.addEventListener('click', () => {
+        removeShowClass();
+        removeActiveClass();
+
+        item.classList.add('active');
+        accordionContainers[idx].classList.add('show');
+    })
+})
+
+
+
+
+function removeShowClass() {
+    accordionContainers.forEach(container => container.classList.remove('show'))
+}
+
+function removeActiveClass() {
+    accordionItems.forEach(accItem => accItem.classList.remove('active'))
+}
+</script>
 <?php wp_footer(); ?>
 </body>
 

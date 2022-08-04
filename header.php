@@ -42,7 +42,7 @@
                 <nav role="navigation" class="nav-menu w-nav-menu">
                     <a href="<?php echo site_url('/') ?>" aria-current="page"
                         class="nav-link main-nav w-nav-link w--current">Home</a>
-                    <div data-hover="true" data-delay="0" class="nav-link w-dropdown">
+                    <div data-hover="true" data-delay="0" class="nav-link w-dropdown ">
                         <div class="nav-link w-dropdown-toggle">
                             <div class="w-icon-dropdown-toggle"></div>
                             <div>Services</div>
@@ -195,11 +195,14 @@
                             <div>Company</div>
                         </div>
                         <nav class="dropdown-list w-dropdown-list">
-                            <a href="our-story.html" class="nav-sub-menu w-dropdown-link">Our Story</a>
-                            <a href="science-innovation.html" class="nav-sub-menu w-dropdown-link">Science &amp;
+                            <a href="<?php echo site_url('/our-story'); ?>" class="nav-sub-menu w-dropdown-link">Our
+                                Story</a>
+                            <a href="<?php echo site_url('/science-innovation'); ?>"
+                                class="nav-sub-menu w-dropdown-link">Science &amp;
                                 Innovation</a>
-                            <a href="careers.html" class="nav-sub-menu w-dropdown-link">Careers</a>
-                            <a href="blogs.html" class="nav-sub-menu w-dropdown-link">Blogs</a>
+                            <a href="<?php echo site_url('/careers'); ?>"
+                                class="nav-sub-menu w-dropdown-link">Careers</a>
+                            <a href="<?php echo site_url('/blog'); ?>" class="nav-sub-menu w-dropdown-link">Blogs</a>
                         </nav>
                     </div>
                     <div data-hover="true" data-delay="0" class="nav-link w-dropdown">
@@ -208,15 +211,18 @@
                             <div>Resources</div>
                         </div>
                         <nav class="dropdown-list w-dropdown-list">
-                            <a href="physician-forms.html" class="nav-sub-menu w-dropdown-link">Physician Forms</a>
-                            <a href="patient-forms.html" class="nav-sub-menu w-dropdown-link">Patient Forms</a>
-                            <a href="https://tesis-biosciences.webflow.io/patient-forms?tab=patient-forms-section#patientFaq"
+                            <a href="<?php echo site_url('/physician-forms'); ?>"
+                                class="nav-sub-menu w-dropdown-link">Physician Forms</a>
+                            <a href="<?php echo site_url('/patient-forms'); ?>"
+                                class="nav-sub-menu w-dropdown-link">Patient Forms</a>
+                            <a href="<?php echo get_theme_file_uri('/patient-forms?tab=patient-forms-section#patientFaq'); ?>"
                                 class="nav-sub-menu w-dropdown-link">Patient FAQ</a>
-                            <a href="order-sample-kit.html" class="nav-sub-menu w-dropdown-link">Order a Sample Kit</a>
+                            <a href="<?php echo site_url('/order-sample-kit'); ?>"
+                                class="nav-sub-menu w-dropdown-link">Order a Sample Kit</a>
                         </nav>
                     </div>
-                    <a href="locations.html" class="nav-link main-nav w-nav-link">Locations</a>
-                    <a href="contact-us.html" class="nav-link main-nav w-nav-link">Contact</a>
+                    <a href="<?php echo site_url('/locations'); ?>" class="nav-link main-nav w-nav-link">Locations</a>
+                    <a href="<?php echo site_url('/contact-us'); ?>" class="nav-link main-nav w-nav-link">Contact</a>
                     <div class="search-overlay-btn">
                         <a href="#" class="search-link w-inline-block">
                             <svg class="seach-btn" width="37" height="37" viewBox="0 0 37 37" fill="none"
@@ -255,3 +261,27 @@
         </div>
         <div data-w-id="519f64bb-ae26-46df-ca57-94bb23cba33e" class="nav-bg"></div>
     </div>
+    <script>
+    window.addEventListener('load', function() {
+
+        const navlinks = document.querySelectorAll('.nav-link');
+        const subNavLinks = document.querySelectorAll('.nav-sub-menu');
+        var currentLocation = window.location;
+
+        navlinks.forEach((link) => {
+
+            link.classList.remove('w--current');
+            if (link.href == currentLocation) {
+                link.classList.add('w--current');
+            }
+        });
+
+        subNavLinks.forEach((subLink) => {
+
+            subLink.classList.remove('w--current');
+            if (subLink.href == currentLocation) {
+                subLink.classList.add('w--current');
+            }
+        });
+    })
+    </script>
